@@ -3398,9 +3398,10 @@ GameObject:
   - component: {fileID: 242390022}
   - component: {fileID: 242390021}
   - component: {fileID: 242390020}
+  - component: {fileID: 242390024}
   m_Layer: 0
   m_Name: Gate
-  m_TagString: Untagged
+  m_TagString: Gate 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3481,6 +3482,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 310
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &242390024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242390019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f13ac91428f375449eabed7b77a991e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 30
+  openTimer: 30
+  waitTimer: 2
+  setWaitTimer: 2
+  movementSpeed: 2
+  isGateOpen: 0
 --- !u!1 &266304481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5125,9 +5144,10 @@ GameObject:
   - component: {fileID: 349945452}
   - component: {fileID: 349945451}
   - component: {fileID: 349945450}
+  - component: {fileID: 349945454}
   m_Layer: 0
   m_Name: Gate
-  m_TagString: Untagged
+  m_TagString: Gate 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5206,8 +5226,26 @@ Transform:
   m_LocalScale: {x: 1, y: 20.273504, z: 34.15916}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 305
+  m_RootOrder: 309
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &349945454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349945449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff28b2118a81c0040bfc5f1404630248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 30
+  openTimer: 30
+  waitTimer: 2
+  setWaitTimer: 2
+  movementSpeed: 2
+  isGateOpen: 0
 --- !u!1 &363304139
 GameObject:
   m_ObjectHideFlags: 0
@@ -6453,7 +6491,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20.273504, z: 35.97301}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 308
+  m_RootOrder: 307
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479535159
 GameObject:
@@ -11167,7 +11205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20.273504, z: 34.15916}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 307
+  m_RootOrder: 306
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &786755614
 GameObject:
@@ -18954,9 +18992,10 @@ GameObject:
   - component: {fileID: 1268580478}
   - component: {fileID: 1268580477}
   - component: {fileID: 1268580476}
+  - component: {fileID: 1268580480}
   m_Layer: 0
   m_Name: Gate
-  m_TagString: Untagged
+  m_TagString: Gate 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19037,6 +19076,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 312
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1268580480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268580475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f0e9c5faeccef4d838d0e51248f810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 30
+  openTimer: 30
+  waitTimer: 2
+  setWaitTimer: 2
+  movementSpeed: 10
+  isGateOpen: 0
 --- !u!1 &1268744722
 GameObject:
   m_ObjectHideFlags: 0
@@ -20954,7 +21011,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20.273504, z: 35.97301}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 309
+  m_RootOrder: 308
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379483014
 GameObject:
@@ -25959,9 +26016,10 @@ GameObject:
   - component: {fileID: 1762595653}
   - component: {fileID: 1762595652}
   - component: {fileID: 1762595651}
+  - component: {fileID: 1762595655}
   m_Layer: 0
   m_Name: Gate
-  m_TagString: Untagged
+  m_TagString: Gate 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26042,6 +26100,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 311
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762595655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762595650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d712cda345008ab4ebaf96b894baeb9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 30
+  openTimer: 30
+  waitTimer: 2
+  setWaitTimer: 2
+  movementSpeed: 2
+  isGateOpen: 0
 --- !u!1 &1783868677
 GameObject:
   m_ObjectHideFlags: 0
@@ -27959,7 +28035,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20.273504, z: 34.15916}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 306
+  m_RootOrder: 305
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2010419035
 GameObject:
