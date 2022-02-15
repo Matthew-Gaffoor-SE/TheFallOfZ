@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gate1 : MonoBehaviour
+public class GateScript : MonoBehaviour
 {
     public float countdownTimer;
     public float openTimer;
@@ -10,15 +10,24 @@ public class Gate1 : MonoBehaviour
     public float setWaitTimer;
     public float movementSpeed;
     public bool isGateOpen;
+    public Vector3 TargetPosition;
+
+    void Start()
+    {
+        TargetPosition = transform.position;
+    }
 
     void Update()
     {
+        if (Game.GameIsRunning == false)
+            return;
+
         openTimer -= Time.deltaTime;
 
         if (openTimer <= 0)
         {
             openTimer = countdownTimer;
-            transform.position = new Vector3(-0.8f, 26f, 82.7f);
+            TargetPosition.y += 16;
             isGateOpen = true;
         }
 
@@ -28,9 +37,11 @@ public class Gate1 : MonoBehaviour
             if (waitTimer <= 0)
             {
                 waitTimer = setWaitTimer;
-                transform.position = new Vector3(-0.8f, 10.4f, 82.7f);
+                TargetPosition.y -= 16;
                 isGateOpen = false;
             }
         }
+
+        transform.position = Vector3.Lerp(transform.position, TargetPosition, Time.deltaTime * movementSpeed);
     }
 }

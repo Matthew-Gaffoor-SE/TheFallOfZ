@@ -42,4 +42,9 @@ public class PlayerScript : MonoBehaviour
             transform.position += transform.right * MovementSpeed * Time.deltaTime;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Game.GameIsRunning = true;
+    }
 }
