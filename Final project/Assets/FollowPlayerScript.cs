@@ -13,5 +13,6 @@ public class FollowPlayerScript : MonoBehaviour
         Vector3 dirToPlayer = (Player.position - transform.position).normalized;
 
         transform.position += dirToPlayer * MovementSpeed * Time.deltaTime;
+
     }
 }

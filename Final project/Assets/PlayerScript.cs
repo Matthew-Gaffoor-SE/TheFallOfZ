@@ -21,25 +21,26 @@ public class PlayerScript : MonoBehaviour
     
     void Update()
     {
-        yaw += speedH * Input.GetAxis("Mouse X");
-        pitch -= speedV * Input.GetAxis("Mouse Y");
-        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+            transform.position += Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.position += Camera.main.transform.forward * MovementSpeed * 2f * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+            transform.position -= Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position -= transform.right * MovementSpeed * Time.deltaTime;
+            transform.position -= Camera.main.transform.right * MovementSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += transform.right * MovementSpeed * Time.deltaTime;
+            transform.position += Camera.main.transform.right * MovementSpeed * Time.deltaTime;
         }
     }
 
