@@ -491,7 +491,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44572703}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8008,6 +8008,7 @@ GameObject:
   - component: {fileID: 430289065}
   - component: {fileID: 430289064}
   - component: {fileID: 430289068}
+  - component: {fileID: 430289069}
   m_Layer: 0
   m_Name: Outside Tile
   m_TagString: Untagged
@@ -8105,6 +8106,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
   m_Center: {x: 0.00000014901161, y: 0, z: 0}
+--- !u!54 &430289069
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430289063}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &433786519
 GameObject:
   m_ObjectHideFlags: 0
@@ -9594,6 +9611,7 @@ GameObject:
   - component: {fileID: 549420892}
   - component: {fileID: 549420891}
   - component: {fileID: 549420895}
+  - component: {fileID: 549420896}
   m_Layer: 0
   m_Name: Outside Tile
   m_TagString: Untagged
@@ -9691,6 +9709,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
   m_Center: {x: 0, y: 0, z: 0.000000059604645}
+--- !u!54 &549420896
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549420890}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &558423701
 GameObject:
   m_ObjectHideFlags: 0
@@ -13489,6 +13523,7 @@ GameObject:
   - component: {fileID: 754582464}
   - component: {fileID: 754582463}
   - component: {fileID: 754582467}
+  - component: {fileID: 754582468}
   m_Layer: 0
   m_Name: Outside Tile
   m_TagString: Untagged
@@ -13586,6 +13621,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
   m_Center: {x: -0.0000006854534, y: 0, z: 0.0000038146973}
+--- !u!54 &754582468
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754582462}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &758861449
 GameObject:
   m_ObjectHideFlags: 0
@@ -34268,6 +34319,7 @@ GameObject:
   - component: {fileID: 1757927162}
   - component: {fileID: 1757927161}
   - component: {fileID: 1757927165}
+  - component: {fileID: 1757927166}
   m_Layer: 0
   m_Name: Outside Tile
   m_TagString: Untagged
@@ -34365,6 +34417,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0.000000059604645}
+--- !u!54 &1757927166
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757927160}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1757933123
 GameObject:
   m_ObjectHideFlags: 0
