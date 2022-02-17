@@ -30,7 +30,6 @@ public class TileFaller : MonoBehaviour
             GameObject randomTile = (GameObject)((Transform)tileObj[Random.Range(0, tileObj.Length)]).gameObject;
             Rigidbody rb = randomTile.GetComponent<Rigidbody>();
             rb.isKinematic = false;
-
         }
     }
 }

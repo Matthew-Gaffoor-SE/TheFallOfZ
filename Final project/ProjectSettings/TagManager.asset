@@ -10,6 +10,7 @@ TagManager:
   - Gate 4
   - OOB
   - Zombie
+  - Tile
   layers:
   - Default
   - TransparentFX
