@@ -9,10 +9,6 @@ public class ZombieSpawner : MonoBehaviour
     public float SpawnTime;
     public float SpawnDelay;
 
-    void Start()
-    {
-        InvokeRepeating("SpawnObject", SpawnTime, SpawnDelay);  
-    }
 
     void Update()
     {
