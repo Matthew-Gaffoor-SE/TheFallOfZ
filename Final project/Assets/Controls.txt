@@ -1,0 +1,10 @@
+Controls -
+
+W = Forward
+S = Backwards
+A = left
+D = Right
+
+Q = Sprint Forward
+E = pickup weapon (Look at weapon to pickup)
+Spacebar = Attack

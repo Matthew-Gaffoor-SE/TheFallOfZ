@@ -11,6 +11,10 @@ TagManager:
   - OOB
   - Zombie
   - Tile
+  - Bat
+  - canGrab
+  - Axe
+  - Bow
   layers:
   - Default
   - TransparentFX
