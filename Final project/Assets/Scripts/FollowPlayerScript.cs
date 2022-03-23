@@ -10,6 +10,7 @@ public class FollowPlayerScript : MonoBehaviour
 
     void Update()
     {
+        transform.LookAt(Player);
         Vector3 dirToPlayer = (Player.position - transform.position).normalized;
 
         transform.position += dirToPlayer * MovementSpeed * Time.deltaTime;

@@ -9,6 +9,7 @@ public class PickUpBow : MonoBehaviour
     public GameObject Bow;
     GameObject CurrentWeapon;
     GameObject wp;
+    public GameObject PickupCanvas;
 
     private FireScript _FS;
     bool canGrab;
@@ -21,19 +22,7 @@ public class PickUpBow : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (CurrentWeapon != null)
-                    Drop();
-
-
                 PickUp();
-            }
-        }
-
-        if (CurrentWeapon != null)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Drop();
             }
         }
     }
@@ -46,6 +35,7 @@ public class PickUpBow : MonoBehaviour
         {
             if (hit.transform.tag == "Bow")
             {
+                PickupCanvas.SetActive(true);
                 canGrab = true;
                 wp = hit.transform.gameObject;
             }
@@ -53,6 +43,10 @@ public class PickUpBow : MonoBehaviour
             {
                 canGrab = false;
             }
+        }
+        else
+        {
+            PickupCanvas.SetActive(false);
         }
     }
 
@@ -64,12 +58,5 @@ public class PickUpBow : MonoBehaviour
         Bow.transform.parent = EquipPosition;
         _FS = GameObject.Find("arc_copie(2)").GetComponent<FireScript>();
         _FS.IsEquip = true;
-    }
-
-    void Drop()
-    {
-        CurrentWeapon.transform.parent = null;
-        CurrentWeapon.GetComponent<Rigidbody>().isKinematic = false;
-        CurrentWeapon = null;
     }
 }

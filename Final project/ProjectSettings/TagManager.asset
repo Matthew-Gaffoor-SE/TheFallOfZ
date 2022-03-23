@@ -15,6 +15,7 @@ TagManager:
   - canGrab
   - Axe
   - Bow
+  - fall
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class DestroyScript : MonoBehaviour
     {
         if (Game.GameIsRunning == true)
         {
-            Destroy(SpawnPoint);
+            SpawnPoint.SetActive(false);
         }
     }
 }

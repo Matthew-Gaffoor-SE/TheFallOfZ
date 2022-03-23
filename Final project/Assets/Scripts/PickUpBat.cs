@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpBat : MonoBehaviour
@@ -9,8 +7,9 @@ public class PickUpBat : MonoBehaviour
     public GameObject Bat;
     GameObject CurrentWeapon;
     GameObject wp;
+    public GameObject PickupCanvas;
 
-    private SwingScript _SS;
+    private SwingScript SS;
     bool canGrab;
 
     private void Update()
@@ -21,19 +20,7 @@ public class PickUpBat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (CurrentWeapon != null)
-                    Drop();
-
-
                 PickUp();
-            }
-        }
-
-        if (CurrentWeapon != null)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Drop();
             }
         }
     }
@@ -46,6 +33,7 @@ public class PickUpBat : MonoBehaviour
         {
             if (hit.transform.tag == "Bat")
             {
+                PickupCanvas.SetActive(true);
                 canGrab = true;
                 wp = hit.transform.gameObject;
             }
@@ -53,6 +41,10 @@ public class PickUpBat : MonoBehaviour
             {
                 canGrab = false;
             }
+        }
+        else
+        {
+            PickupCanvas.SetActive(false);
         }
     }
 
@@ -62,13 +54,7 @@ public class PickUpBat : MonoBehaviour
         Destroy(CurrentWeapon);
         Bat.transform.position = EquipPosition.position;
         Bat.transform.parent = EquipPosition;
-        _SS = GameObject.Find("pCylinder1").GetComponent<SwingScript>();
-        _SS.IsEquip = true;
-    }
-
-    void Drop()
-    {
-        CurrentWeapon.transform.parent = null;
-        CurrentWeapon = null;
+        SS = GameObject.Find("eBat").GetComponent<SwingScript>();
+        SS.IsEquip = true;
     }
 }

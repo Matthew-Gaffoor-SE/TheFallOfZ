@@ -10,14 +10,35 @@ public class PlayerScript : MonoBehaviour
     public float speedH = 2.0f;
     private float yaw = 0.0f;
 
+    public GameObject PauseUI;
+    public bool Paused;
+
+    public GameObject Ms;
+    public CameraScript Cs;
+
     void Start()
     {
         Cursor.visible = false;
+        Cs.GetComponent<CameraScript>();
+        Time.timeScale = 1;
     }
 
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Paused = !Paused;
+            PauseUI.SetActive(Paused);
+            Time.timeScale = Paused ? 0 : 1;
+            Cs = Ms.GetComponent<CameraScript>();
+            Cs.enabled = !Cs.enabled;
+        }
+        if (Paused)
+        {
+            return;
+        }
+
         yaw += speedH * Input.GetAxis("Mouse X");
         transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
 

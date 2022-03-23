@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class FireScript : MonoBehaviour
 {
-    public float power;
-
     public Animator animator;
 
     public bool IsEquip;
@@ -32,16 +30,6 @@ public class FireScript : MonoBehaviour
         {
             animator.SetTrigger("Fire");
             AudioSource.PlayClipAtPoint(shoot, transform.position);
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Zombie")
-        {
-            Vector3 direction = transform.position - other.transform.position.normalized;
-            direction.y = 0;
-            other.GetComponent<Rigidbody>().AddForce(direction * power);
         }
     }
 }

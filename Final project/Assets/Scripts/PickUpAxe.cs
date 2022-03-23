@@ -9,6 +9,7 @@ public class PickUpAxe : MonoBehaviour
     public GameObject Axe;
     GameObject CurrentWeapon;
     GameObject wp;
+    public GameObject PickupCanvas;
 
     private SlamScript _SLS;
     bool canGrab;
@@ -21,19 +22,7 @@ public class PickUpAxe : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (CurrentWeapon != null)
-                    Drop();
-
                 PickUp();
-            }
-        }
-         // HUD.CloseMessagePanel();
-
-        if (CurrentWeapon != null)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Drop();
             }
         }
     }
@@ -46,13 +35,18 @@ public class PickUpAxe : MonoBehaviour
         {
             if (hit.transform.tag == "Axe")
             {
+                PickupCanvas.SetActive(true);
                 canGrab = true;
                 wp = hit.transform.gameObject;
             }
             else
-            {
+            {          
                 canGrab = false;
             }
+        }
+        else
+        {
+            PickupCanvas.SetActive(false);
         }
     }
 
@@ -64,11 +58,5 @@ public class PickUpAxe : MonoBehaviour
         Axe.transform.parent = EquipPosition;
         _SLS = GameObject.Find("axe(1)").GetComponent<SlamScript>();
         _SLS.IsEquip = true;
-    }
-
-    void Drop()
-    {
-        CurrentWeapon.transform.parent = null;
-        CurrentWeapon = null;
     }
 }

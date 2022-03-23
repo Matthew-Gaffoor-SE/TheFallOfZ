@@ -1,9 +1,6 @@
 TODO - GAME DEV
 
-o Fix bat issue (Drag new prefab on scene, then assign to player batPos to fix right now)
-o Menu Screen
-o Control panel
-o Zombie Textures
+
 o Zombies knock player back
 o Zombie and player health bar
 o Zombie attack sound and player hurt sound
@@ -11,6 +8,7 @@ o Player falling sound
 o Zombie spawn and speed random range
 o Add a ceiling
 o Add eary constant sound as background noise
+o Add menu music
 
 - Maybe add bobbing sound with player running
 - Maybe have power ups/health bars randomly spawn

@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     // rotating camera with mouse - https://www.youtube.com/watch?v=lYIRm4QEqro&ab_channel=LearnEverythingFast
-    public float speedH = 2.0f;
-    public float speedV = 2.0f;
+    public float speedH;
+    public float speedV;
 
     private float yaw = 0.0f;
     private float pitch = 0.0f;
@@ -15,6 +15,7 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
