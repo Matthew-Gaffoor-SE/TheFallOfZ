@@ -37,7 +37,7 @@ public class SwingScript : MonoBehaviour
     {
         if (other.tag == "Zombie")
         {
-            Vector3 direction = transform.position - other.transform.position.normalized;
+            Vector3 direction = (other.transform.position - transform.position).normalized;
             direction.y = 0;
             other.GetComponent<Rigidbody>().AddForce(direction * speed);
         }

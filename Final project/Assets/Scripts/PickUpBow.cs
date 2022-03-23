@@ -7,11 +7,9 @@ public class PickUpBow : MonoBehaviour
     public Transform EquipPosition;
     public float Distance = 10f;
     public GameObject Bow;
+    public GameObject PickupCanvas;
     GameObject CurrentWeapon;
     GameObject wp;
-    public GameObject PickupCanvas;
-
-    private FireScript _FS;
     bool canGrab;
 
     private void Update()
@@ -52,11 +50,12 @@ public class PickUpBow : MonoBehaviour
 
     void PickUp()
     {
+        Bow.SetActive(true);
         CurrentWeapon = wp;
         Destroy(CurrentWeapon);
-        Bow.transform.position = EquipPosition.position;
-        Bow.transform.parent = EquipPosition;
-        _FS = GameObject.Find("arc_copie(2)").GetComponent<FireScript>();
-        _FS.IsEquip = true;
+        FireScript FS = Bow.GetComponent<FireScript>();
+        
+        FS.IsEquip = true;
+
     }
 }

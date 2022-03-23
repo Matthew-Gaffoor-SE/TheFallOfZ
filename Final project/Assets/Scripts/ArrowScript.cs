@@ -10,7 +10,7 @@ public class ArrowScript : MonoBehaviour
     {
         if (other.tag == "Zombie")
         {
-            Vector3 direction = transform.position - other.transform.position.normalized;
+            Vector3 direction = (transform.forward);
             direction.y = 0;
             other.GetComponent<Rigidbody>().AddForce(direction * power);
         }

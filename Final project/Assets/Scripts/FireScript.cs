@@ -13,7 +13,6 @@ public class FireScript : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        IsEquip = false;
     }
 
     void Update()
